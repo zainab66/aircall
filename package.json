@@ -1,6 +1,9 @@
 {
   "name": "frontend-hiring-challenge",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.1   "
+  },
   "description": "Leap test",
   "main": "index.js",
   "repository": "",
@@ -8,20 +11,22 @@
   "license": "",
   "private": false,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "dayjs": "^1.8.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.16.0",
+    "@babel/polyfill": "^7.8.7",
     "@babel/preset-react": "^7.9.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "8.1.0",
